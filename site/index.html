@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; frame-src *;" />
+        <title>Assignment 1</title>
+    </head>
+    <body>
+        <div id="bio">
+            <h1>Assignment 1</h1>
+            <h2>Cambell Xiao</h2>
+            <h3> <time datetime="10/9/2026">October 9th 2026</time></h3>
+            <p>
+                Hi! My name is Cambell, a Junior at the UWB studying Cybersecurity! I enjoy playing CTFs, Counter-strike 2, and Tetrio!
+            </p>
+        </div>
+
+        <br>
+
+        <div id="facts">
+            <b>Fun Facts</b>
+            <ul>
+                <li><h4> Top #130 on Tetrio globally </h6> </li>
+
+                <pre>           Playstyle: Stride
+           Favorite Opening: SDPC Stickspin-Variation    
+                </pre>
+
+                <li> <h4>Currently Faceit 8 on CS2</h6></li>
+
+                <pre>           Role: Entry/Igl
+           I only play in 5-stacks :/    
+                </pre>
+
+                <li> <h4>I play badminton and football</h6></li>
+                                <pre>           I suck at both
+                </pre>
+                <li> <h4>I have > 4000 hours on a game called ROTMG</h6></li>
+
+                <pre>           Its probably one of the <strike>best</strike> worst games in history
+                </pre>
+
+                <li><a href="videogames.html">You can see more info about me here!</a> </li>
+            </ul>
+        </div>
+        <div id="frames">
+            <iframe id=github src="https://github.com/CambellX/homework-"></iframe>
+            <br>
+            <small>Github blocks iframes crossorigin so heres my requestrepo instead</small>
+            <br>
+            <iframe id="repo" src="http://6f22gadr.requestrepo.com"> </iframe>
+        </div>
+
+        <br><br><br>
+        <hr>
+
+        <div id="bottomstuff">
+            <form id="form"> 
+                <h6><label for="input"> Any feedback is <u>appreciated!</u></label></h6>
+                <input id="input" placeholder="Feedback" name = 'input' type="text"/>
+            </form>
+
+            <output id="output"></output>
+
+            <strong id="output2"></strong>
+            <br><br><br>
+            <footer>
+                <small>
+                    CSS 481 A
+                    Professor Uong
+                </small>
+            </footer>
+        </div>
+    </body>
+    <script>
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+
+        let input = document.querySelector('#form')
+        let output = document.querySelector('#output')
+        input.addEventListener("submit", async (event)=> {
+            event.preventDefault();
+
+            const formData = new FormData(input)
+            formData.delete('input')
+
+            output.textContent = "Feedback Received!"
+            
+            await delay(5000);
+            output.textContent = ""
+            document.querySelector('#output2').textContent = "NO FEEDBACK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" 
+        })
+    </script>
+</html>
