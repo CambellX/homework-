@@ -2,6 +2,7 @@
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     color: white;
 }
 
@@ -14,23 +15,26 @@
     list-style-position: inside;
 }
 
-ul {
-    list-style-type: none;
+div {
+    box-shadow: 50px 50px white;
+    background-color: rgb(27, 27, 27);
 }
 
 .upsideDown {
-    padding: 85px;
-    width: 75%;
-    height: 100%;
+    padding: 30px;
+    width: 50%;
+    height: 50%;
     rotate: 180deg;
     opacity: 50%;
     text-shadow: 2px 2px red;
-    zoom: 200%
+    zoom: 500%;
+    line-height: 25%;
 }
 
 .spin {
     display: inline-block;
     animation: spin 2s linear infinite;
+    font-size: 25px;
 }
 
 @keyframes spin {
@@ -40,11 +44,23 @@ ul {
 
 #bottomstuff {
     direction: rtl;
-    text-orientation: upright;
     text-decoration: underline;
-    text-underline-position: auto;
+    text-underline-position: 10px;
     text-indent: 250px;
 }
 
-.container div {
+a {
+    text-decoration-color: red;
+    text-underline-offset: 4px;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+iframe {
+    width: 5%;
+    max-width: 50px;
+    outline: 2px solid white;
 }
