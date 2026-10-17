@@ -45,7 +45,7 @@ div {
 #bottomstuff {
     direction: rtl;
     text-decoration: underline;
-    text-underline-position: 10px;
+    text-underline-position: under;
     text-indent: 250px;
 }
 
